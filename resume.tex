@@ -1,0 +1,125 @@
+% !TeX program = lualatex
+% Resume layout for Harrison Ford (@hatf0)
+
+\documentclass[10pt,a4paper,roman]{moderncv} 
+
+\moderncvtheme[blue]{banking}
+\nopagenumbers{}
+
+% set the encoding
+\usepackage[utf8]{inputenc}
+% cool icons
+% \usepackage{fontawesome}
+\usepackage{fontspec}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+% set the page scaling
+\usepackage[scale=0.9]{geometry}
+\usepackage{multicol}
+\usepackage{import}
+
+\newcommand{\github}[1]{ % there has to be a better way then doing the kern-0.1ex trick... TBD
+    \textnormal{\faGithub\enspace\href{https://github.com/#1}{#1}}% \kern-0.1ex
+}
+
+\name{Harrison}{Ford}
+\input{contact_info} % avoid releasing my address!
+\homepage{0xcc.pw}
+\social[linkedin]{hatf0}
+\social[github]{hatf0}
+
+% \setlength{\hintscolumnwidth}{3cm} 
+% \setlength{\tabcolsep}{12pt}
+
+\begin{document}
+    \begin{center}
+        \makecvtitle
+        \vspace*{-10mm}
+    \end{center}
+   \section{EXPERIENCE}
+        \cventry{Aug 2022 - Present}{DevOps / Infrastructure / Software Engineer}{Synapse Softworks LLC}{Raleigh, NC (Remote)}{}{
+            \begin{itemize}
+                \item Created fault-tolerant \& reliable services with an uptime rate of 99.99999\%, with no recorded downtime since launch.
+                \item Managed \& maintained servers which actively handle 150+ TB of traffic each month.
+                \item Designed \& launched a new e-commerce website using Next.js, Cloudflare, AWS ECS and friends with 3+ million unique visitors/month
+                \item Introduced ELK stack (Elasticsearch, Logstash, Kibana) to enable complex aggregation of massive data-sets, enabling fraud analysts to proactively prevent fraudulent user activity
+                \item Negotiated \& worked with multiple SaaS vendors on contracts totaling over \$3m+ USD.
+                \item Deployed company-wide MDM program (via Apple Business Manager / Microsoft Intune) to manage a fleet of 10+ devices.
+                \item Actively mitigated large-scale DDoS attacks (peak 300m+ requests) via Cloudflare WAF rules, mitigating the impact on end-user experience
+                \item Deployed \& managed (via Ansible) a cluster of bare-metal high-performance machines to help accelerate GitHub Actions performance, reducing build times by 60-70\%.
+                \item Technologies: AWS (Amazon Web Services), Ansible, Elasticsearch, Cloudflare, Terraform, Next.js, Rust, C++, TypeScript, HTML, GitHub Actions
+            \end{itemize}
+        }
+        \cventry{Jun 2022 - Aug 2022}{DevOps Engineer / System Administrator}{Synapse Softworks LLC}{Raleigh, NC (Remote)}{}{
+            \begin{itemize}
+                \item Spearheaded the company's migration from GitLab \textrightarrow{} GitHub Enterprise, including migration of 30+ CI pipelines to GitHub Actions.
+                \item Created \& deployed reliable AWS infrastructure for C\# services via Terraform / GitOps
+                \item Significantly reduced developer friction using GitHub Actions, saving over \$30k+ USD in labor, and reducing the barrier of entry to deploy code to production.
+                \item Technologies: AWS (Amazon Web Services), Cloudflare, Terraform, GitHub Actions
+            \end{itemize}
+        }
+        \cventry{Jul 2021 - Jul 2022}{Contract Software Engineer}{Symmetry Investments}{Charlotte, NC (Remote)}{}{
+            \begin{itemize}
+                \item Wrote \& maintained performance-sensitive code that is currently used to trade \$50 million+ USD via algorithmic trading applications. 
+                \item Directly committed code to the organization's standard library, which is used by 100+ engineers on a daily basis.
+                \item Co-led an initiative to provide "private cloud" services for the entire organization, which involved setting up \& maintaining a cluster of 20+ Linux servers.
+                \item Technologies: HashiCorp Nomad, HashiCorp Consul, HashiCorp Vault, Terraform, D Programming Language, GitHub Actions
+            \end{itemize}
+        }
+        \cventry{Nov 2020 - Present}{Founder / Lead Consultant}{int3 Systems, LLC}{Raleigh, NC / Charlotte, NC}{}{
+            \begin{itemize}
+                \item Kept business in active compliance with all local \& federal regulations.
+                \item Provided software development consulting services for 6+ clients, netting a total of \$150k+ USD over the lifetime of the company.
+                \item Designed reusable IaC (Infrastructure as Code) components via Terraform for AWS ECS / CodeBuild
+                \item Migrated legacy PHP applications to AWS via AWS ECS
+                \item Technologies: AWS (Amazon Web Services), Terraform, PHP, GitLab, D Programming Language, C, C++
+            \end{itemize}
+        }
+        \cventry{Nov 2020 - Dec 2021}{Contract Software Engineer}{Premiere Digital Services}{Raleigh, NC (Remote)}{}{
+            \begin{itemize}
+                \item Designed and architected a full software \& hardware solution based on the NVIDIA Tegra X1 platform.
+                \item Implemented support for the D Programming Language to Yocto Linux.
+                \item Created a streaming platform using WebRTC to stream real-time video from low-power IoT devices.
+                \item Technologies: AWS (Amazon Web Services), WebRTC, Yocto Linux, Embedded Linux, D Programming Language, C
+            \end{itemize}
+        }
+    \closesection{}
+    \section{LANGUAGES / TECHNOLOGIES}
+        \begin{itemize}
+            \item Languages: C, C++, D, Python, Rust, JavaScript, CSS, HTML, TypeScript, Java, Bash
+            \item Technologies: AWS (Amazon Web Services), Microsoft Azure, React, Next.js, Cloudflare
+        \end{itemize}
+
+    \closesection{}
+    \section{PROJECTS}
+        \cventry{Mar 2023 - Present}{\github{hatf0/prinux}}{Linux on HP Prime Graphing Calculator}{}{}{
+            \begin{itemize}
+                \item Enabled Doom (on Linux) to run on a HP Prime G2 Graphing Calculator.
+                \item Used Buildroot to create a customized Linux root filesystem.
+                \item Tinkered with the Linux kernel build system to enable kernel modules for the Vivante GPU.
+            \end{itemize}
+        }
+        \cventry{Jan 2021 - Jul 2022}{\github{libmir}}{Mir Project}{}{}{
+            \begin{itemize}
+                \item Contributed heavily to the Mir project -- a collection of libraries designed for scientific computing.
+                \item Revamped CI/CD across the entire project, replacing Travis-CI with GitHub Actions.
+            \end{itemize}
+        }
+        \cventry{Jan 2020 - Jul 2020}{\github{AppleIntelWifi/adapter}}{Intel Wireless Driver on macOS}{}{}{
+            \begin{itemize}
+                \item Prototype wireless driver built with Apple's IOKit framework. Uses the undocumented Apple80211/IO80211Family libraries.
+            \end{itemize}
+        }
+    \closesection{}
+    \section{EDUCATION}
+        \cventry{Expected Graduation: Dec 2025}{B.Sc. in Computer Science}{University of North Carolina at Charlotte}{Charlotte, NC}{GPA: \textit{3.36}}{}
+    \closesection{}
+    \section{MISC}
+        \small{
+            \begin{itemize}
+                \item Certified as an AutoCAD Certified User
+                \item Conversational in Japanese
+            \end{itemize}
+        }
+    \closesection{}
+\end{document}
